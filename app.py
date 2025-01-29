@@ -17,12 +17,17 @@ institution = "University of the Witwatersrand"
 
 # Display basic profile information
 st.header("Researcher Overview")
-st.write(f"**Name:** {name}")
-st.write(f"**Field of Research:** {field}")
-st.write(f"**Institution:** {institution}")
+st.header("Researcher Overview")
 pic = st.file_uploader("Upload a picture of yourself",type = "jpg")
-if pic is not None:
-    st.image(pic, width = 200)
+
+col1, col2 = st.columns(2)
+with col1:
+    st.write(f"**Name:** {name}")
+    st.write(f"**Field of Research:** {field}")
+    st.write(f"**Institution:** {institution}")
+with col2:
+    if pic is not None:
+        st.image(pic, width = 200)
 
 
 # Add a section for publications
