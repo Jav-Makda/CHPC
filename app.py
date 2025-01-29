@@ -17,7 +17,6 @@ institution = "University of the Witwatersrand"
 
 # Display basic profile information
 st.header("Researcher Overview")
-st.header("Researcher Overview")
 pic = st.file_uploader("Upload a picture of yourself",type = "jpg")
 
 col1, col2 = st.columns(2)
